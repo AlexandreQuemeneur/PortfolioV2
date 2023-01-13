@@ -1,10 +1,13 @@
 <template>
-    <div class="loader">
-        <h1>{{ counter }}</h1>
+    <div>
+        <div ref="counter" class="loader">
+            <h1>{{ counter }}</h1>
+        </div>        
     </div>
 </template>
 
 <script>
+import gsap from 'gsap';
 export default {
     name: 'LoaderComponent',
     data() {
@@ -15,9 +18,14 @@ export default {
     },
     mounted() {
         let intervalId = setInterval(() => {
-            if (this.counter === 100){
-                clearInterval(intervalId)
+            if (this.counter === 100){               
+                clearInterval(intervalId) 
+                setTimeout(() => {
+                gsap.to(this.$refs.counter, { duration: 2, opacity: 0,});     
+                setTimeout(() => {          
                 this.loading = false
+            }, 1000)
+        }, 1000)
             } else {
                 this.counter++
             }          

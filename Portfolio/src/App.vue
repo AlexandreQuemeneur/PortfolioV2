@@ -4,15 +4,16 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import SkillsComponent from "@/components/SkillsComponent.vue";
 import ProjectComponent from "@/components/ProjectComponent.vue";
 import ContactComponent from "@/components/ContactComponent.vue";
-import LoaderComponent from "@/components/LoaderComponent.vue";
 </script>
 
 <template>
-    <div v-if="loading">
-       <LoaderComponent />
+    <div ref="counter" v-if="loading">
+        <div  class="loader">
+            <h1>{{ counter }}</h1>
+        </div>  
     </div>
 
-    <div v-else>
+    <div  v-else>
         <headerComponent />
         <SkillsComponent />
         <ProjectComponent />  
@@ -24,18 +25,34 @@ import LoaderComponent from "@/components/LoaderComponent.vue";
 
 
 <script>
+import gsap from "gsap";
     export default {
         name: app,
-        data(){
-            return {
-                loading: true,
-            }
-        },
-        mounted() {
-            setTimeout(() => {
-            this.loading = false
-            }, 5000)
+        data() {
+        return {
+            loading: true,
+            counter: 0,
         }
+    },
+    mounted() {
+        let intervalId = setInterval(() => {
+            if (this.counter === 100){               
+                clearInterval(intervalId) 
+                setTimeout(() => {
+                gsap.to(this.$refs.counter, { 
+                    opacity: 0,
+                    duration: 1,
+                    ease: "elastic.inOut",
+                });     
+                setTimeout(() => {          
+                this.loading = false
+            }, 500)
+        }, 500)
+            } else {
+                this.counter++
+            }          
+        }, 20)
+    }
     }
     
 </script>
@@ -55,4 +72,17 @@ import LoaderComponent from "@/components/LoaderComponent.vue";
     font-family: "oleragie";
     src: url(@/assets/fonts/OleragiePersonalUse-axj1g.ttf);
 }
+.loader{
+    background-color: rgb(30, 30, 28); 
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 200px;
+        color: rgb(255, 255, 255);
+        font-family: "morely";
+    }      
+}
+
 </style>
