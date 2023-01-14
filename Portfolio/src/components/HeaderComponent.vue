@@ -69,7 +69,7 @@ h1{
     display: flex;
     justify-content: space-around;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 376px){
     h1{
         font-size: 20px;
     }

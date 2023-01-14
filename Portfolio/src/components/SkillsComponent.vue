@@ -42,7 +42,7 @@ export default {
 //SKILLS
 #skills{
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     padding: 15px;
     background-color: rgb(30, 30, 28);
     display: flex;
@@ -74,10 +74,21 @@ export default {
 .blabla{
     width: 50%
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 375px){
     #skills{
         display: flex;
         flex-direction: column;
     }
+}
+@media screen and (min-width:1181px){
+    #skills{
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    background-color: rgb(30, 30, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
 </style>
