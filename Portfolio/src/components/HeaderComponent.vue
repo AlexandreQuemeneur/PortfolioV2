@@ -1,7 +1,7 @@
 <template>
         <header>
         <div class="stars">
-            <img src="@/assets/star.png" alt="star" id="star" class="on"> 
+            <img src="@/assets/star.png" alt="star" id="star" class="one"> 
             <img src="@/assets/star.png" alt="star" id="star" class="two"> 
             <img src="@/assets/star.png" alt="star" id="star" class="three"> 
             <img src="@/assets/star.png" alt="star" id="star" class="four"> 
@@ -10,6 +10,7 @@
             <div class="name">
                 <h1>Alexandre Quemeneur</h1>      
                 <h2>Développeur web Frontend</h2>
+                <h3>Vue.js</h3>
             </div>
             <div class="planet">
                 <img src="@/assets/terre.png" alt="hearth" class="hearth" >
@@ -24,7 +25,7 @@ import {gsap} from "gsap";
         name: "HeaderComponent",
 
         mounted(){
-            gsap.fromTo(".on",{y:600}, {
+            gsap.fromTo(".one",{y:600}, {
                 y:150,
                 duration: 5.2,
                 yoyo: true,
@@ -58,14 +59,22 @@ import {gsap} from "gsap";
 
 
 <style lang="scss" scoped>
-
-
+.one{
+    transform: rotate(45deg);
+}
+.two{
+    transform: rotate(24deg);
+}
+.three{
+    transform: rotate(13deg);
+}
 header{
     width: 100%;
     background-color: rgb(30, 30, 28);
     #star{
         width: 50px;
     }
+
 }
 h1{
     font-family: "oleragie";
@@ -125,7 +134,7 @@ h1{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 80px 0 0 50px;
+        margin: 120px 0 0 50px;
         align-self: flex-start;
     }
     .comming{

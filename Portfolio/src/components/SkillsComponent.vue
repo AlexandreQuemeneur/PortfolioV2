@@ -97,9 +97,13 @@ export default {
     }
 
     .planet{
+        margin-bottom: 40px;
         .saturne{
-            width: 700px;
+            width: 650px;
         }
+    }
+    .boxglass{
+        margin-bottom: 220px;
     }
 }
 </style>
