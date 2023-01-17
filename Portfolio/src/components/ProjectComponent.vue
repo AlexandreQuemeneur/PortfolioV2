@@ -61,7 +61,6 @@ h2{
 @media screen and (max-width: 415px){
     .project{
         width: 70%;
-        // height: 20%;
         padding: 5px 0;
         margin-left: 5%; 
         h3{
@@ -91,7 +90,6 @@ h2{
     }
     #projects{
     width: 100%;
-    height: 100vh;
     background-color: rgb(30, 30, 28);
 }
 }
@@ -109,7 +107,6 @@ h2{
     }
     #projects{
     width: 100%;
-    height: 100vh;
     background-color: rgb(30, 30, 28);
 }
 }

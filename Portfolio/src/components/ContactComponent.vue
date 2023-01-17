@@ -7,19 +7,24 @@
 
         <div class="contact">
             <form ref="form" @submit.prevent="sendEmail">
+
                 <label>Name</label>
                 <input type="text" name="user_name">
+
                 <label>Email</label>
                 <input type="email" name="user_email">
+
                 <label>Message</label>
-                <textarea name="message"></textarea>
-                <input type="submit" value="Send">
+                <textarea name="message" class="message"></textarea>
+
+                <input type="submit" value="Send" class="button">
+
                 <p v-if="this.succes.sendIt">Thanks for your email</p>
-                <p v-if="this.error.sendIt">Sorry something wrong</p>
+                <p v-if="this.error.sendIt">Sorry something went wrong</p>
             </form>
         </div>
     </section> 
-            <footer>
+    <footer>
         
         <div><p class="boop">&#169;2023 Alexandre quemeneur, All Rights Reserved </p></div>
         <div class="social">
@@ -109,17 +114,8 @@ export default {
 @media screen and (max-width: 415px){
 
     .contact{
+        z-index: 9999;
         form{
-            button{
-                width: 60%;
-                height: 30px;
-                margin: 10px 0 0 0;
-                padding: 5px;
-                border: none;
-                outline: none;
-                color: black;
-                border-top: 3px solid rgb(186, 8, 8);
-            }
             input{
                 margin: 5px 0;
                 padding: 5px;
@@ -127,7 +123,7 @@ export default {
                 border: none;
                 outline: none;
                 color: black;
-                border-top: 3px solid rgb(186, 8, 8);
+                border-top: 3px solid #F6E670;
             }
             textarea{
                 width: 85%;
@@ -137,7 +133,11 @@ export default {
                 outline: none;
                 color: black;
                 padding: 5px;                
-                border-top: 3px solid rgb(186, 8, 8);
+                border-top: 3px solid #F6E670;
+            }
+            .button:hover{
+                border-top: 3px solid #9d8c0c;
+                cursor: pointer;
             }
         }
     }
@@ -159,7 +159,7 @@ export default {
                 border: none;
                 outline: none;
                 color: black;
-                border-top: 3px solid rgb(186, 8, 8);
+                border-top: 3px solid #F6E670;
             }
             input{
                 width: 80%;
@@ -169,7 +169,7 @@ export default {
                 border: none;
                 outline: none;
                 color: black;
-                border-top: 3px solid rgb(186, 8, 8);
+                border-top: 3px solid #F6E670;
             }
             textarea{
                 width: 85%;
@@ -179,7 +179,11 @@ export default {
                 border: none;
                 outline: none;
                 color: black;
-                border-top: 3px solid rgb(186, 8, 8);
+                border-top: 3px solid #F6E670;
+            }
+            .button:hover{
+                border-top: 3px solid #9d8c0c;
+                cursor: pointer;
             }
         }
     }
@@ -224,7 +228,7 @@ export default {
                 margin: 10px 0;
                 border-top: 3px solid #F6E670;
             }
-            input:hover{
+            .button:hover{
                 border-top: 3px solid #9d8c0c;
                 cursor: pointer;
             }

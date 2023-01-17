@@ -6,14 +6,15 @@
             <img src="@/assets/star.png" alt="star" id="star" class="three"> 
             <img src="@/assets/star.png" alt="star" id="star" class="four"> 
         </div>
-      
-        <h1>Alexandre Quemeneur</h1>      
-        <h2>Développeur web Frontend</h2>
-        <div class="planet">
-            <img src="@/assets/saturne.png" alt="saturne" class="saturne" >
-            <img src="@/assets/terre.png" alt="hearth" class="hearth" >
+        <div class="comming">
+            <div class="name">
+                <h1>Alexandre Quemeneur</h1>      
+                <h2>Développeur web Frontend</h2>
+            </div>
+            <div class="planet">
+                <img src="@/assets/terre.png" alt="hearth" class="hearth" >
+            </div>
         </div>
-        <img src="@/assets/rovergood.png" alt="rover" class="rover">
     </header>
 </template>
 
@@ -87,14 +88,6 @@ h1{
         width: 120px;
         height: 120px;
         }
-        .saturne{
-            margin-top: 75px;
-            z-index: 999;
-        }
-    }
-    .rover{
-        width: 120px;
-        height: 120px;
     }
 }
 }
@@ -109,18 +102,6 @@ h1{
     .planet{
         display: flex;
         justify-content: space-around;
-        img{
-        width: 120px;
-        height: 120px;
-        }
-        .saturne{
-            margin-top: 75px;
-            z-index: 999;
-        }
-    }
-    .rover{
-        width: 120px;
-        height: 120px;
     }
 }
 }
@@ -129,23 +110,26 @@ h1{
     h1{
         font-size: 35px;
     }
-    img{
-        width: 50px;
-    }
     .planet{
         display: flex;
         justify-content: space-around;
         img{
-        width: 300px;
-        height: 300px;
+        width: 750px;
+        .hearth{
+            align-self: flex-start;
         }
-        .saturne{
-            margin-top: 75px;
-            z-index: 999;
         }
     }
-    .rover{
-        width: 350px;
+    .name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 80px 0 0 50px;
+        align-self: flex-start;
+    }
+    .comming{
+        display: flex;
     }
 }
 }

@@ -9,7 +9,7 @@ import ContactComponent from "@/components/ContactComponent.vue";
 <template>
     <div ref="counter" v-if="loading">
         <div  class="loader">
-            <h1>{{ counter }}</h1>
+            <p>{{ counter }}</p>           
         </div>  
     </div>
 
@@ -81,12 +81,12 @@ import gsap from "gsap";
     src: url(@/assets/fonts/OleragiePersonalUse-axj1g.ttf);
 }
 .loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(30, 30, 28); 
-    h1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+    height: 100vh;
+    p{
         font-size: 200px;
         color: rgb(255, 255, 255);
         font-family: "morely";
