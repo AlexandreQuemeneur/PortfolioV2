@@ -36,7 +36,34 @@ export default {
 
 <style lang="scss" scoped>
 
-h1{
+// h1{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+//     font-size: 200px;
+//     color: rgb(255, 255, 255);
+//     font-family: "morely";
+// }
+// .loader {
+//     background-color: rgb(30, 30, 28);    
+// }
+@media screen and (max-width: 415px){
+    h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: "morely";
+}
+.loader {
+    background-color: rgb(30, 30, 28);    
+}
+}
+@media screen and (min-width:416px) and (max-width: 1180px){
+    h1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,5 +74,20 @@ h1{
 }
 .loader {
     background-color: rgb(30, 30, 28);    
+}
+}
+@media screen and (min-width:1181px){
+    h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 200px;
+    color: rgb(255, 255, 255);
+    font-family: "morely";
+}
+.loader {
+    background-color: rgb(30, 30, 28);    
+}
 }
 </style>

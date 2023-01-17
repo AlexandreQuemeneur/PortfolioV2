@@ -6,20 +6,16 @@
         </div>
 
         <div class="contact">
-            <form>
-                <!-- <label for="name"> Votre nom :</label> -->
-                <input type="text" placeholder="Your name" id="name"/>
-                               
-                <!-- <label for="mail"> Votre email :</label> -->
-                <input type="text" placeholder="Your mail" id="mail" />
-
-                <!-- <label for="subject"> Sujet :</label> -->
-                <input type="text" placeholder="Your subject" id="subject" />
-
-                <!-- <label for="message" > Votre message :</label> -->
-                <textarea type="textarea" placeholder="Your text" name="content" id="content"></textarea>
-
-                <button @click.prevent="sendIt()">Envoyer !</button>
+            <form ref="form" @submit.prevent="sendEmail">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+                <p v-if="this.succes.sendIt">Thanks for your email</p>
+                <p v-if="this.error.sendIt">Sorry something wrong</p>
             </form>
         </div>
     </section> 
@@ -39,10 +35,21 @@
 <script>
 import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import emailjs from '@emailjs/browser';
 gsap.registerPlugin(ScrollTrigger);
 export default {
     name: "ContactComponent",
-
+    data(){
+        
+        return{
+            succes : {
+                sendIt: false
+            },
+            error : {
+                sendIt: false
+            }
+        }
+    },
     mounted(){
         gsap.to("#rocket",{
             y: -7,
@@ -53,8 +60,12 @@ export default {
     },
 
     methods:{
-        sendIt(){
-            gsap.to("#rocket", {
+        sendEmail() {
+            emailjs.sendForm('service_f7y2g02', 'template_4grqns6', this.$refs.form, 'camcHrgzAXAZON1lp')
+            .then((result) => {
+                console.log('SUCCESS!', result.text);
+                this.succes.sendIt = true;
+                gsap.to("#rocket", {
                 y: -1000,
                 x: -500, 
                 rotate: -45,
@@ -62,6 +73,10 @@ export default {
                 ease: "slow(0.7, 0.7, false)",
                 duration: 2.7,
             })
+            }, (error) => {
+                this.error.sendIt = true;
+                console.log('FAILED...', error.text);
+            });
         }
     },
 }
@@ -209,7 +224,7 @@ export default {
                 margin: 10px 0;
                 border-top: 3px solid #F6E670;
             }
-            button:hover{
+            input:hover{
                 border-top: 3px solid #9d8c0c;
                 cursor: pointer;
             }

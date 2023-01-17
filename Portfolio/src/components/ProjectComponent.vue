@@ -46,12 +46,6 @@ export default {
 
 <style lang="scss" scoped>
 
-//PROJECTS
-// #projects{
-//     width: 100%;
-//     height: 100vh;
-//     background-color: rgb(30, 30, 28);
-// }
 h2{
     margin-bottom: 20px;
 }
@@ -67,7 +61,7 @@ h2{
 @media screen and (max-width: 415px){
     .project{
         width: 70%;
-        height: 20%;
+        // height: 20%;
         padding: 5px 0;
         margin-left: 5%; 
         h3{
@@ -85,7 +79,7 @@ h2{
 @media screen and (min-width:416px) and (max-width: 1180px){
     .project{
         width: 80%;
-        height: 20%;
+        // height: 30%;
         padding: 5px 0;
         margin-left: 5%; 
         h3{
@@ -104,7 +98,6 @@ h2{
 @media screen and (min-width:1181px){
     .project{
         width: 80%;
-        height: 20%;
         padding: 5px 0;
         margin-left: 5%; 
         h3{

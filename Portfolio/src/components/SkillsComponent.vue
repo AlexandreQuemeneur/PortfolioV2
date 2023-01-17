@@ -3,7 +3,7 @@
         <div class="blabla">
             
                 <h2>Skills</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum beatae quod quaerat, suscipit cumque aspernatur saepe asperiores eveniet, rerum placeat, architecto quis facere est repudiandae perferendis id doloremque perspiciatis voluptatem cupiditate error odio! Maiores sed similique debitis illum temporibus autem omnis rerum cupiditate voluptate maxime?</p>
+                <p>Je suis un développeur front-end débutant ayant récemment obtenu mon diplôme de développeur web et web mobile avec l'école O'clock. J'ai une bonne connaissance de Vue.js et j'ai eu l'occasion de mettre en pratique mes compétences en créant des projets en utilisant cette technologie. Je maîtrise également HTML, CSS et JavaScript, et j'ai une bonne compréhension des bonnes pratiques de développement web. Je suis passionné par l'apprentissage de nouvelles technologies.</p>
 
         </div>
 
@@ -42,7 +42,6 @@ export default {
 //SKILLS
 #skills{
     width: 100%;
-    // height: 100vh;
     padding: 15px;
     background-color: rgb(30, 30, 28);
     display: flex;
@@ -74,7 +73,7 @@ export default {
 .blabla{
     width: 50%
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 414px){
     #skills{
         display: flex;
         flex-direction: column;
