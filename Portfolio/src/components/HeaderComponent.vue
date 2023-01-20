@@ -1,11 +1,12 @@
 <template>
         <header>
-        <div class="stars">
-            <img src="@/assets/star.png" alt="star" id="star" class="one"> 
-            <img src="@/assets/star.png" alt="star" id="star" class="two"> 
-            <img src="@/assets/star.png" alt="star" id="star" class="three"> 
-            <img src="@/assets/star.png" alt="star" id="star" class="four"> 
-        </div>
+            <div class="stars">
+                <img src="@/assets/star.png" alt="star" id="star" class="one"> 
+                <img src="@/assets/star.png" alt="star" id="star" class="two"> 
+                <img src="@/assets/star.png" alt="star" id="star" class="three"> 
+                <img src="@/assets/star.png" alt="star" id="star" class="four"> 
+            </div>
+        </header>
         <div class="comming">
             <div class="name">
                 <h1>Alexandre Quemeneur</h1>      
@@ -13,10 +14,9 @@
                 <h3>Vue.js</h3>
             </div>
             <div class="planet">
-                <img src="@/assets/terre.png" alt="hearth" class="hearth" >
-            </div>
-        </div>
-    </header>
+                <img src="@/assets/terre.png" alt="hearth" class="hearth" >     
+            </div>           
+        </div>   
 </template>
 
 <script>
@@ -59,87 +59,105 @@ import {gsap} from "gsap";
 
 
 <style lang="scss" scoped>
-.one{
-    transform: rotate(45deg);
-}
-.two{
-    transform: rotate(24deg);
-}
-.three{
-    transform: rotate(13deg);
-}
+//BASES
 header{
-    width: 100%;
     background-color: rgb(30, 30, 28);
     #star{
         width: 50px;
     }
-
+    .stars{
+    display: flex;
+    justify-content: space-around;
+    .one{
+    transform: rotate(45deg);
+    }
+    .two{
+        transform: rotate(24deg);
+    }
+    .three{
+        transform: rotate(13deg);
+    }
+}
+}
+.comming{
+    background-color: rgb(30, 30, 28);
 }
 h1{
     font-family: "oleragie";
 }
-.stars{
-    display: flex;
-    justify-content: space-around;
-}
 
-@media screen and (max-width: 376px){
-   header{
-    h1{
-        font-size: 10px;
-    }
 
-    .planet{
+
+//MOBILE
+@media screen and (max-width: 425px){
+    .comming{
         display: flex;
-        justify-content: space-around;
-        img{
-        width: 120px;
-        height: 120px;
+        flex-direction: column;
+        padding: 20px;
+        h1{
+            font-size: 10px;
         }
-    }
-}
-}
-@media screen and (min-width:377px) and (max-width: 1180px){
-    header{
-    h1{
-        font-size: 20px;
-    }
-    img{
-        width: 50px;
-    }
-    .planet{
-        display: flex;
-        justify-content: space-around;
-    }
-}
-}
-@media screen and (min-width:1181px){
-    header{
-    h1{
-        font-size: 35px;
-    }
-    .planet{
-        display: flex;
-        justify-content: space-around;
-        img{
-        width: 750px;
+        h2{
+            margin-left: 5px;
+        }
+        h3{
+            margin-left: 10px;
+        }
         .hearth{
-            align-self: flex-start;
+            width: 200px;
+            
         }
+        .planet{
+           align-self: flex-end; 
         }
     }
-    .name{
+
+}
+
+
+
+//TABLETTE
+@media screen and (min-width:426px) and (max-width: 1180px){
+    .comming{
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        margin: 120px 0 0 50px;
-        align-self: flex-start;
-    }
-    .comming{
-        display: flex;
+        h1{
+            font-size: 20px;
+        }
+        h2{
+            margin-left: 5px;
+        }
+        h3{
+            margin-left: 15px;
+        }
+        .hearth{
+            width: 400px;
+        }
     }
 }
+
+
+//ORDI
+@media screen and (min-width:1181px){
+    .comming{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 35px;
+        }
+        .name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hearth{
+            margin-bottom: -135px;
+            width: 750px;
+        }
+    }
+
 }
 </style>

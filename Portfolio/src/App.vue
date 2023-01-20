@@ -80,6 +80,9 @@ import gsap from "gsap";
     font-family: "oleragie";
     src: url(@/assets/fonts/OleragiePersonalUse-axj1g.ttf);
 }
+h4{
+    font-family: "oleragie";
+}
 .loader{
     display: flex;
     align-items: center;

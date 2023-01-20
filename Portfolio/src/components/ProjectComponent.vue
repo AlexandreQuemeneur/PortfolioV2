@@ -1,6 +1,6 @@
 <template>
     <section id="projects">
-        <h2>All my projects :</h2>
+        <h4>All my projects :</h4>
         <section class="project ecolomind">
             <h3>Ecolomind</h3>
             <p>In a context where ecology is starting to take a prominent place in the collective consciousness, people may not know where to begin this transition.
@@ -28,7 +28,7 @@
         </section>
         <section class="project wlm">
             <h3>We love movie</h3>
-            <h4>comming soon</h4>
+            <p>comming soon</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, fugiat!</p>
             <a href=""><img src="@/assets/lien.png" alt="link to Vintage shop"></a>
             <div target="_blank" class="tech">
@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 
-h2{
+h4{
     margin-bottom: 20px;
 }
 .project{
