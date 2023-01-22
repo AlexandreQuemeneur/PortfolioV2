@@ -10,7 +10,7 @@
         <div class="comming">
             <div class="name">
                 <h1>Alexandre Quemeneur</h1>      
-                <h2>Développeur web Frontend</h2>
+                <h2>Frontend developer</h2>
                 <h3>Vue.js</h3>
             </div>
             <div class="planet">

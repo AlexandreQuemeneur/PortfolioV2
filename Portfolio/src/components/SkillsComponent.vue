@@ -5,12 +5,12 @@
                 <img src="@/assets/saturne.png" alt="saturne" class="saturne" >
             </div>  
             <div class="myself">      
-                <p>Je suis un développeur front-end débutant ayant récemment obtenu mon diplôme de développeur web et web mobile avec l'école O'clock. J'ai une bonne connaissance de Vue.js et j'ai eu l'occasion de mettre en pratique mes compétences en créant des projets en utilisant cette technologie. Je maîtrise également HTML, CSS et JavaScript, et j'ai une bonne compréhension des bonnes pratiques de développement web. Je suis passionné par l'apprentissage de nouvelles technologies.</p>
+                <p>I am a beginner front-end developer who recently graduated from the O'clock web and mobile developer school. I have a good knowledge of Vue.js and have had the opportunity to put my skills into practice by creating projects using this technology. I also master HTML, CSS, and JavaScript and have a good understanding of web development best practices. I am passionate about learning new technologies.</p>
             </div>
         </div>
 
         <div class="boxglass">
-            <h4>Mes outils</h4>
+            <h4>My tools</h4>
             <div class="boxone">
                 <img src="@/assets/logo/icon-vuejs.svg" alt="" class="glass">
                 <img src="@/assets/logo/icon-javascript.svg" alt="" class="glass">

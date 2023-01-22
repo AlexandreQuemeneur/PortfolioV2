@@ -5,7 +5,7 @@
             <h3>Ecolomind</h3>
             <p>In a context where ecology is starting to take a prominent place in the collective consciousness, people may not know where to begin this transition.
             This website would be a platform where everyone could share their tips on how to act in this direction. Project: Allow users to submit and consult ideas, tips.</p>
-            <a target="_blank" href="https://ecolomind.tk/#/"><img src="@/assets/lien.png" alt="link to ecolomind"></a>
+            <a target="_blank" href="https://ecolomind.tk/#/"><img src="@/assets/lien.png" alt="link to ecolomind"></a>          
             <div class="tech">
                 
             </div>
@@ -30,8 +30,8 @@
             <h3>We love movie</h3>
             <p>comming soon</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, fugiat!</p>
-            <a href=""><img src="@/assets/lien.png" alt="link to Vintage shop"></a>
-            <div target="_blank" class="tech">
+            <a target="_blank" href=""><img src="@/assets/lien.png" alt="link to Vintage shop"></a>
+            <div class="tech">
 
             </div>
         </section>
@@ -58,7 +58,9 @@ h4{
 .vintage{
     display: none;
 }
-@media screen and (max-width: 415px){
+
+//MOBILE
+@media screen and (max-width: 425px){
     .project{
         width: 70%;
         padding: 5px 0;
@@ -68,14 +70,19 @@ h4{
         }    
         img{
             width: 30px;
-        }        
+        }   
+        p{
+            padding-right: 20px;
+        }     
     }
     #projects{
     width: 100%;
     background-color: rgb(30, 30, 28);
 }
 }
-@media screen and (min-width:416px) and (max-width: 1180px){
+
+//TABLETTE
+@media screen and (min-width:426px) and (max-width: 1180px){
     .project{
         width: 80%;
         // height: 30%;
@@ -86,6 +93,9 @@ h4{
         }    
         img{
             width: 30px;
+        }
+        p{
+            padding-right: 150px;
         }        
     }
     #projects{
@@ -103,6 +113,9 @@ h4{
         }    
         img{
             width: 30px;
+        }
+        p{
+            padding-right: 450px;
         }        
     }
     #projects{
