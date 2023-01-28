@@ -55,7 +55,7 @@ import gsap from "gsap";
 
         let docTitle = document.title;
         window.addEventListener('blur', () => {
-        document.title = "Come Back 😁";
+        document.title = "Come Back 🥹";
         });
         window.addEventListener('focus', () => {
         document.title = docTitle;
@@ -89,11 +89,37 @@ h4{
     justify-content: center;
     background-color: rgb(30, 30, 28); 
     height: 100vh;
-    p{
-        font-size: 200px;
-        color: rgb(255, 255, 255);
-        font-family: "morely";
-    }      
+}
+//MOBILE
+@media screen and (max-width: 425px){
+    .loader{
+        p{
+            font-size: 100px;
+            color: rgb(255, 255, 255);
+            font-family: "morely";
+        }
+    }
 }
 
+//TABLETTE
+@media screen and (min-width:426px) and (max-width: 1180px){
+    .loader{
+        p{
+            font-size: 150px;
+            color: rgb(255, 255, 255);
+            font-family: "morely";
+        }
+    }
+}
+
+//DESKTOP
+@media screen and (min-width: 1181px){
+    .loader{
+        p{
+            font-size: 200px;
+            color: rgb(255, 255, 255);
+            font-family: "morely";
+        }      
+    }
+}
 </style>

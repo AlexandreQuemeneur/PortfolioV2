@@ -96,6 +96,7 @@ h1{
         padding: 20px;
         h1{
             font-size: 10px;
+            letter-spacing: 2px;
         }
         h2{
             margin-left: 5px;
@@ -124,6 +125,7 @@ h1{
         align-items: center;
         h1{
             font-size: 20px;
+            letter-spacing: 3px;
         }
         h2{
             margin-left: 5px;
@@ -133,6 +135,9 @@ h1{
         }
         .hearth{
             width: 400px;
+        }
+        .name{
+            padding: 15px;
         }
     }
 }
@@ -146,12 +151,14 @@ h1{
         align-items: center;
         h1{
             font-size: 35px;
+            letter-spacing: 5px;
         }
         .name{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 50px;
         }
         .hearth{
             margin-bottom: -135px;

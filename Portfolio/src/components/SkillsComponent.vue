@@ -73,7 +73,8 @@ export default {
     justify-content: flex-end;
     flex-direction: column;
     h4{
-        margin-top: 30px;
+        margin: 30px 0 0 10px;
+
     }
     .glass{    
         padding: 7px 0;
@@ -109,7 +110,7 @@ export default {
     justify-content: flex-end;
     flex-direction: column;
     h4{
-        margin-top: 70px;
+        margin: 70px 0 0 30px;
     }
     .glass{    
         padding: 7px 0;
@@ -170,14 +171,14 @@ export default {
         }
     }
     .boxglass{
-        margin-bottom: 220px;
-    }
-    .boxglass{
     margin: none;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 220px;
+    h4{
+        margin: 100px 0 0 50px;
+    }
     .glass{    
         padding: 7px 0;
         white-space: nowrap;
