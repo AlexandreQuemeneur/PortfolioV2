@@ -9,17 +9,18 @@
             <form ref="form" @submit.prevent="sendEmail">
 
                 <label>Name</label>
-                <input type="text" name="user_name">
+                <input type="text" name="user_name" v-model="field1"/>
 
                 <label>Email</label>
-                <input type="email" name="user_email">
+                <input type="email" name="user_email" v-model="field2">
 
                 <label>Message</label>
-                <textarea name="message" class="message"></textarea>
+                <textarea name="message" class="message" v-model="field3"></textarea>
 
                 <input type="submit" value="Send" class="button">
 
                 <p v-if="this.succes.sendIt">Thanks for your email</p>
+                <p v-if="this.empty.send">Please make sure that all fields are filled in.</p>
                 <p v-if="this.error.sendIt">Sorry something went wrong</p>
             </form>
         </div>
@@ -51,8 +52,14 @@ export default {
                 sendIt: false
             },
             error : {
-                sendIt: false
-            }
+                sendIt: false,
+            },
+            empty : {
+                send: false,
+            },
+            field1: "",
+            field2: "",
+            field3: "",
         }
     },
     mounted(){
@@ -66,23 +73,28 @@ export default {
 
     methods:{
         sendEmail() {
-            emailjs.sendForm('service_f7y2g02', 'template_4grqns6', this.$refs.form, 'camcHrgzAXAZON1lp')
-            .then((result) => {
-                console.log('SUCCESS!', result.text);
-                this.succes.sendIt = true;
-                gsap.to("#rocket", {
-                y: -1000,
-                x: -500, 
-                rotate: -45,
-                opacity: 0, 
-                ease: "slow(0.7, 0.7, false)",
-                duration: 2.7,
-            })
-            }, (error) => {
-                this.error.sendIt = true;
-                console.log('FAILED...', error.text);
-            });
-        }
+            if (!this.field1 || !this.field2 || !this.field3) {
+                this.empty.send = true;
+            } else {
+                emailjs.sendForm('service_f7y2g02', 'template_4grqns6', this.$refs.form, 'camcHrgzAXAZON1lp')
+                .then((result) => {
+                    console.log('SUCCESS!', result.text);
+                    this.succes.sendIt = true;
+                    this.empty.send = false;
+                    gsap.to("#rocket", {
+                    y: -1000,
+                    x: -500, 
+                    rotate: -45,
+                    opacity: 0, 
+                    ease: "slow(0.7, 0.7, false)",
+                    duration: 2.7,
+                })
+                }, (error) => {
+                    this.error.sendIt = true;
+                    console.log('FAILED...', error.text);
+                });    
+            }   
+        },
     },
 }
 </script>
